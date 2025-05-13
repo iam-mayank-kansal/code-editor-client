@@ -1,7 +1,7 @@
 import { questionDescription } from "@/utils/data";
 import Desciption from "../description";
 import Submissions from "../submission";
-import DesciptionAndSubmissionTab from "../Des-Sub-Tab-1";
+import DesciptionAndSubmissionTab from "../Des-Sub-Tab";
 import { DesciptionAndSubmissionTabInterface } from "@/utils/interface";
 
 export default function DesciptionAndSubmissionPart({ activeTab, setactiveTab }: DesciptionAndSubmissionTabInterface) {

@@ -1,47 +1,42 @@
-import { LanguagesInterface, QuestionDescriptionInterface } from "./interface";
+import { QuestionDescriptionInterface } from "./interface";
 
 export const questionDescription: QuestionDescriptionInterface = {
-  no: 1,
-  title: "Two Sum",
-  status: "medium",
-  description: ["Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.", "You may assume that each input would have exactly one solution, and you may not use the same element twice.", "You can return the answer in any order."],
+  no: 2,
+  title: "Check Prime Number",
+  status: "easy",
+  description: [
+    "Given an integer number, determine whether it is a prime number or not.",
+    "A prime number is a number that is greater than 1 and has no positive divisors other than 1 and itself.",
+    "Return true if the number is prime, otherwise return false."
+  ],
   examples: [
     {
-      input: "nums = [2,7,11,15], target = 9",
-      output: "[0,1]",
-      explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]."
+      input: "number = 7",
+      output: "true",
+      explanation: "7 is only divisible by 1 and itself, so it's a prime number."
     },
     {
-      input: "nums = [2,7,11,15], target = 9",
-      output: "[0,1]",
-      explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]."
+      input: "number = 10",
+      output: "false",
+      explanation: "10 is divisible by 1, 2, 5, and 10, so it's not a prime number."
     },
     {
-      input: "nums = [2,7,11,15], target = 9",
-      output: "[0,1]",
-      explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]."
-    },
-    {
-      input: "nums = [2,7,11,15], target = 9",
-      output: "[0,1]",
-      explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]."
-    },
-    {
-      input: "nums = [2,7,11,15], target = 9",
-      output: "[0,1]",
-      explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]."
-    },
+      input: "number = 2",
+      output: "true",
+      explanation: "2 is the smallest and only even prime number."
+    }
   ]
 }
 
-export const languages: LanguagesInterface[] = [
-  { name: "C++", code: 1 },
-  { name: "Java", code: 1 },
-  { name: "C", code: 1 },
-  { name: "Python", code: 1 },
-  { name: "Node.js", code: 1 },
-  { name: "JavaScript", code: 1 },
-  { name: "TypeScript", code: 1 },
+
+export const languages = [
+  "C++",
+  "Java",
+  "C",
+  "Python",
+  "Node.js",
+  "JavaScript",
+  "TypeScript",
 ];
 
 

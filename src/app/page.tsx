@@ -1,14 +1,11 @@
 "use client"
 import { useState } from "react";
-import CodeEditorPart from "@/components/Code-Part-2";
-import DesciptionAndSubmissionPart from "@/components/Des-Sub-Part-1";
+import CodeEditorPart from "@/components/Code-Part";
+import DesciptionAndSubmissionPart from "@/components/Des-Sub-Part";
 
 export default function Home() {
 
   const [activeTab, setactiveTab] = useState(0);
-  const [currentLanguage, setcurrentLanguage] = useState("C++");
-
-
 
   return (
     <div className="m-2">
@@ -18,7 +15,7 @@ export default function Home() {
         <DesciptionAndSubmissionPart activeTab={activeTab} setactiveTab={setactiveTab} />
         
         {/* right part code writting */}
-       <CodeEditorPart currentLanguage={currentLanguage} setcurrentLanguage={setcurrentLanguage} />
+       <CodeEditorPart  />
 
       </section>
     </div>

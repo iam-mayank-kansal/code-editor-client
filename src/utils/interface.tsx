@@ -5,6 +5,7 @@ export interface Examples {
   output: string,
   explanation: string,
 }
+
 export interface QuestionDescriptionInterface {
   no: number,
   title: string,
@@ -13,21 +14,27 @@ export interface QuestionDescriptionInterface {
   examples: Examples[]
 }
 
-export interface LanguagesInterface {
-  name: string,
-  code: number
-}
-
 export interface CodeEditorTabInterface {
   showLanguageOption: boolean,
   setshowLanguageOption: (value: boolean) => void,
-  currentLanguage: string,
-  setcurrentLanguage: (value: string) => void
+  activeTab: number,
+  setactiveTab: (value: number) => void,
+  language: string,
+  code: string
+  setLangauge: (value: string) => void,
+  codeResponse: any,
+  setCodeResponse: (value: string) => void;
 }
 
 export interface DesciptionAndSubmissionTabInterface {
   activeTab: number,
   setactiveTab: (value: number) => void
+}
+
+export interface CodeInterface {
+  language: string,
+  code: string,
+  setCode: (value: string) => void
 }
 
 export interface CodeEditorPartInterface {
