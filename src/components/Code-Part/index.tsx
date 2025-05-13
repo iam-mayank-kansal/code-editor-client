@@ -10,7 +10,7 @@ import { CodeResponseInterface } from '@/utils/interface';
 export default function CodeEditorPart() {
   const [showLanguageOption, setshowLanguageOption] = useState<boolean>(false);
   const [activeTab, setactiveTab] = useState<number>(0);
-  const [language, setLanguage] = useState<string>('python');
+  const [language, setLanguage] = useState<string>('C++');
   const [code, setCode] = useState<string>('');
   const [codeResponse, setCodeResponse] = useState<CodeResponseInterface>({
     output: 'Not Compiled Anything Yet',

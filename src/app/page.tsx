@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="m-2">
-      <h1>Compiler</h1>
+      {/* <h1>Compiler</h1> */}
       <section className="flex gap-1 h-[90vh]">
         {/* left part code desciptions and submissions */}
         <DesciptionAndSubmissionPart
