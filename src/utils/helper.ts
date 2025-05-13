@@ -25,7 +25,6 @@ export function getDefaultScript(language: string): string {
   }
 }
 
-
 export function getDefaultInput(language: string): string {
   switch (language.toLowerCase()) {
     case 'python':
