@@ -1,16 +1,56 @@
-export interface Examples {
+export interface TestInputInterface {
+  key: string;
+  value: any;
+}
+
+export interface TestCaseInterface {
+  index: number;
+  type: 'public' | 'private';
+  inputs: TestInputInterface[];
+  expectedOutput: any;
+}
+
+export interface ExamplesInterface {
   input: string;
   output: string;
   explanation: string;
 }
 
+export interface BoilerplateInterface {
+  [language: string]: string;
+}
+
+export interface SubmissionInterface {
+  language: string;
+  code: string;
+  status: 'Accepted' | 'Wrong Answer' | 'Runtime Error' | 'Time Limit Exceeded';
+  submittedAt: string; // ISO string or readable format
+}
+
 export interface QuestionDescriptionInterface {
   no: number;
   title: string;
-  status: string;
+  difficulty: string;
+  functionSignature: string;
   description: string[];
-  examples: Examples[];
+  constraints: string[];
+  hints: string[];
+  tags: string[];
+  examples: ExamplesInterface[];
+  testCases: {
+    index: number;
+    type: 'public' | 'private';
+    inputs: { key: string; value: any }[];
+    expectedOutput: any;
+  }[];
+  boilerplate: {
+    javascript: string;
+    python: string;
+    [key: string]: string;
+  };
+  submissions?: SubmissionInterface[]; // optional, can be empty initially
 }
+
 
 export interface CodeResponseInterface {
   output: string;
@@ -43,4 +83,13 @@ export interface CodeInterface {
 export interface CodeEditorPartInterface {
   currentLanguage: string;
   setcurrentLanguage: (value: string) => void;
+}
+
+export interface TestInputsInterface {
+  key : string,
+  value : string | number
+}
+export interface TestCaseDataInterface {
+  index : number,
+  inputs : TestInputsInterface[]
 }

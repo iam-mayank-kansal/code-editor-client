@@ -9,7 +9,7 @@ export default function DesciptionAndSubmissionPart({
   setactiveTab,
 }: DesciptionAndSubmissionTabInterface) {
   return (
-    <div className="w-[50%] bg-gray-900 rounded-xl h-[90vh]  overflow-hidden ">
+    <div className="w-[50%] bg-gray-900 rounded-xl h-[90vh] pb-5 overflow-hidden ">
       {/* header for switching tabs for description and submissions  */}
       <DesciptionAndSubmissionTab
         activeTab={activeTab}
@@ -19,7 +19,7 @@ export default function DesciptionAndSubmissionPart({
         {/* tab for Desciption  */}
         <Desciption data={questionDescription} activeTab={activeTab} />
         {/* tab for Submission  */}
-        <Submissions activeTab={activeTab} />
+        <Submissions data={questionDescription} activeTab={activeTab} />
       </div>
     </div>
   );
